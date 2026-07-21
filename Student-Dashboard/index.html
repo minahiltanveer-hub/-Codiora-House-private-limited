@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- jsPDF AutoTable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>🎓 Student Portal</h2>
+
+            <ul>
+                <li>📊 Dashboard</li>
+                <li>👨‍🎓 Students</li>
+                <li>📈 Analytics</li>
+                <li>⚙ Settings</li>
+            </ul>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header>
+                <div>
+                    <h1>Student Dashboard</h1>
+                    <p>Manage student records efficiently</p>
+                </div>
+
+                <button id="notificationBtn">
+                    🔔 Notifications
+                </button>
+            </header>
+
+
+            <!-- Notification Box -->
+            <div id="notificationBox" class="notification-box">
+                <h3>Recent Notifications</h3>
+
+                <p>📌 New student registered</p>
+                <p>📌 Student record updated</p>
+                <p>📌 Monthly report generated</p>
+            </div>
+
+
+            <!-- Statistics Cards -->
+            <section class="stats">
+
+                <div class="card">
+                    <h3>Total Students</h3>
+                    <p id="totalStudents">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Average Age</h3>
+                    <p id="averageAge">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Active Students</h3>
+                    <p id="activeStudents">0</p>
+                </div>
+
+            </section>
+
+
+            <!-- Search and Filter -->
+            <section class="controls">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name or email..."
+                >
+
+                <select id="genderFilter">
+                    <option value="all">All Genders</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="all">All Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+
+                <button onclick="exportCSV()">
+                    📄 Export CSV
+                </button>
+
+                <button onclick="exportPDF()">
+                    📕 Export PDF
+                </button>
+
+            </section>
+
+
+            <!-- Add Student Form -->
+            <section class="form-section">
+
+                <h2>Add New Student</h2>
+
+                <form id="studentForm">
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Student Name"
+                    >
+
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Email"
+                    >
+
+                    <input
+                        type="number"
+                        id="studentAge"
+                        placeholder="Age"
+                    >
+
+                    <select id="studentGender">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+
+                    <select id="studentStatus">
+                        <option value="">Select Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+
+                    <button type="submit">
+                        Add Student
+                    </button>
+
+                </form>
+
+                <p id="errorMessage"></p>
+
+            </section>
+
+
+            <!-- Student Table -->
+            <section class="table-section">
+
+                <h2>Student Records</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody"></tbody>
+
+                </table>
+
+                <!-- Pagination -->
+                <div class="pagination">
+
+                    <button id="previousBtn">
+                        Previous
+                    </button>
+
+                    <span id="pageNumber">
+                        Page 1
+                    </span>
+
+                    <button id="nextBtn">
+                        Next
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Charts -->
+            <section class="charts">
+
+                <div class="chart-box">
+                    <h2>Students by Gender</h2>
+                    <canvas id="genderChart"></canvas>
+                </div>
+
+                <div class="chart-box">
+                    <h2>Students by Status</h2>
+                    <canvas id="statusChart"></canvas>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
