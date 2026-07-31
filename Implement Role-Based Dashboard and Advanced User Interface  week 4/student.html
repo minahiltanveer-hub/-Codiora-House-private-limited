@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h2>Student</h2>
+
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">My Courses</a></li>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#" onclick="toggleMode()">Dark / Light</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>Student Dashboard</h1>
+            <button onclick="showNotification()">Notifications</button>
+        </header>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Enrolled Courses</h3>
+                <p>6</p>
+            </div>
+
+            <div class="card">
+                <h3>Assignments</h3>
+                <p>10</p>
+            </div>
+
+            <div class="card">
+                <h3>Attendance</h3>
+                <p>92%</p>
+            </div>
+
+            <div class="card">
+                <h3>CGPA</h3>
+                <p>3.78</p>
+            </div>
+
+        </div>
+
+        <div id="notification" class="notification">
+            Your assignment deadline is tomorrow.
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

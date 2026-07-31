@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h2>Teacher</h2>
+
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">My Classes</a></li>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#" onclick="toggleMode()">Dark / Light</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>Teacher Dashboard</h1>
+            <button onclick="showNotification()">Notifications</button>
+        </header>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Classes</h3>
+                <p>8</p>
+            </div>
+
+            <div class="card">
+                <h3>Students</h3>
+                <p>210</p>
+            </div>
+
+            <div class="card">
+                <h3>Assignments</h3>
+                <p>15</p>
+            </div>
+
+            <div class="card">
+                <h3>Attendance</h3>
+                <p>96%</p>
+            </div>
+
+        </div>
+
+        <div id="notification" class="notification">
+            New assignment submissions received.
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
