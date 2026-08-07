@@ -1,0 +1,54 @@
+.table-section{
+    background:#ffffff;
+    padding:30px;
+    margin:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.table-header h2{
+    color:#1e293b;
+    font-size:28px;
+}
+
+.table-header input{
+    width:300px;
+    padding:12px 15px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+.table-header input:focus{
+    border-color:#2563eb;
+}
+
+#studentTable{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+#studentTable th{
+    background:#2563eb;
+    color:#fff;
+    padding:15px;
+}
+
+#studentTable td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #e5e7eb;
+}
+
+#studentTable tr:hover{
+    background:#eff6ff;
+}

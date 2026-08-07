@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students | Student Performance Analytics Portal</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/student.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>SPAP</h2>
+
+    </div>
+
+    <ul>
+
+        <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+        <li class="active"><a href="student.html"><i class="fa-solid fa-user-graduate"></i> Students</a></li>
+
+        <li><a href="reports.html"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+
+        <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+        <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+    </ul>
+
+</div>
+
+<div class="main-content">
+
+<header>
+
+<h1>Student Management</h1>
+
+</header>
+
+<section class="table-section">
+
+<div class="table-header">
+
+<h2>Student Records</h2>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Student...">
+
+</div>
+
+<table id="studentTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Class</th>
+
+<th>Attendance</th>
+
+<th>GPA</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>101</td>
+
+<td>Ali Khan</td>
+
+<td>BSCS</td>
+
+<td>94%</td>
+
+<td>3.80</td>
+
+<td>Excellent</td>
+
+</tr>
+
+<tr>
+
+<td>102</td>
+
+<td>Ahmed Raza</td>
+
+<td>BSIT</td>
+
+<td>88%</td>
+
+<td>3.55</td>
+
+<td>Good</td>
+
+</tr>
+
+<tr>
+
+<td>103</td>
+
+<td>Fatima Noor</td>
+
+<td>BBA</td>
+
+<td>97%</td>
+
+<td>3.95</td>
+
+<td>Outstanding</td>
+
+</tr>
+
+<tr>
+
+<td>104</td>
+
+<td>Ayesha Malik</td>
+
+<td>BSSE</td>
+
+<td>82%</td>
+
+<td>3.32</td>
+
+<td>Average</td>
+
+</tr>
+
+<tr>
+
+<td>105</td>
+
+<td>Hassan Ali</td>
+
+<td>BSAI</td>
+
+<td>91%</td>
+
+<td>3.71</td>
+
+<td>Very Good</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+</div>
+
+<script src="js/student.js"></script>
+<script src="js/apps.js"></script>
+
+</body>
+
+</html>
